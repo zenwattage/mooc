@@ -27,8 +27,13 @@ public class MainProgram {
      * @return 
      */
     public static int indexOfSmallest(int[] arr){
-        
-        return arr[smallest(arr)];
+        int small = smallest(arr);
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] == small){
+                return i;
+            }
+        }
+        return 0;
     }
     
     
